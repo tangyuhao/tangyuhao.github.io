@@ -137,24 +137,6 @@
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
   
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '273736486403021',
-      xfbml      : true,
-      version    : 'v2.6'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
 
 
 
@@ -409,7 +391,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2017/04/04/How-does-a-search-engine-work/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count fb-comments-count" data-href="http://tangyuhao.github.io/2017/04/04/How-does-a-search-engine-work/" itemprop="commentCount">0</span> comments
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/04/04/How-does-a-search-engine-work/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -484,16 +467,6 @@
 
       
         
-          <div class="social-like">
-            
-
-            
-              <div class="fb_like">
-                <div class="fb-like" data-layout="button_count" data-share="true"></div>
-              </div>
-            
-          </div>
-        
       
 
       
@@ -534,11 +507,11 @@
           
   <div class="comments" id="comments">
     
-      <div class="fb-comments"
-           data-href="http://tangyuhao.github.io/2017/04/04/How-does-a-search-engine-work/"
-           data-numposts="10"
-           data-width="100%"
-           data-colorscheme="light">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
       </div>
     
   </div>
@@ -809,6 +782,26 @@
 
   
 
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://github-blog-8.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://tangyuhao.github.io/2017/04/04/How-does-a-search-engine-work/';
+          this.page.identifier = '2017/04/04/How-does-a-search-engine-work/';
+          this.page.title = 'How Does A Search Engine Work?';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://github-blog-8.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
 
   
 
