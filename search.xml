@@ -119,4 +119,53 @@
         <tag>Machine Learning</tag>
       </tags>
   </entry>
+  <entry>
+    <title>How to Use Latex to Write Your Blog</title>
+    <url>/2020/04/26/How-to-Use-Latex-to-Write-Your-blog/</url>
+    <content><![CDATA[<p>To write math equations in my blog pages, I use Latex. Latex is a document preparation system which allows you to write professional-looking technical documents. For example, most of the scientific publications are written with Latex.</p>
+<script type="math/tex; mode=display">
+Hello, \LaTeX\ world.</script><p>The line above is created by adding a code block below in my markdown file (source files of blog pages):</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">Hello, \LaTeX\ world.</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="Dependencies"><a href="#Dependencies" class="headerlink" title="Dependencies"></a>Dependencies</h2><p>You need to install some dependencies to make your hexo project be able to render “LaTex code” correctly in markdown files. For the <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">NexT theme</a> (the theme I use), you can easily find the “math” block and update it to to below:</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Default(true) will load mathjax/katex script on demand</span></span><br><span class="line">  <span class="comment"># That is it only render those page who has 'mathjax: true' in Front Matter.</span></span><br><span class="line">  <span class="comment"># If you set it to false, it will load mathjax/katex srcipt EVERY PAGE.</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">engine:</span> <span class="string">mathjax</span></span><br></pre></td></tr></table></figure>
+<p>Besides, you need to make sure you have installed <code>hexo-renderer-kramed</code>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
+<h2 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h2><p>Here I list some basic syntax rules, you can find the full document in <a href="https://en.wikibooks.org/wiki/LaTeX" target="_blank" rel="noopener">LaTex Wikibooks</a>.</p>
+<h3 id="Escaping-block"><a href="#Escaping-block" class="headerlink" title="Escaping block"></a>Escaping block</h3><p>There are two ways to include $\LaTeX$ code in markdown:</p>
+<ol>
+<li>use <code>$&lt;latex expression&gt;$</code> to insert $inline$ expression;</li>
+<li>use <code>$$&lt;latex expression&gt;$$</code> to insert displayed expression:</li>
+</ol>
+<script type="math/tex; mode=display">I\ am\ a\ displayed\ expression!</script><h3 id="Alignment"><a href="#Alignment" class="headerlink" title="Alignment"></a>Alignment</h3><p>You can use <code>&amp;</code> to align different lines, and <code>\\</code> to add a line break.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\begin &#123;aligned&#125; </span><br><span class="line">A&amp;&#x3D;B \\</span><br><span class="line">&amp;&#x3D;C \\</span><br><span class="line">&amp;&#x3D;D </span><br><span class="line">\end &#123;aligned&#125;</span><br></pre></td></tr></table></figure><br>The rendered result is (note that I dismissed <code>$$</code>):</p>
+<script type="math/tex; mode=display">
+\begin {aligned}
+A&=B \\
+&=C \\
+&=D 
+\end {aligned}</script><h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><p>Here are some math equations that we often use. </p>
+<h4 id="Case-block"><a href="#Case-block" class="headerlink" title="Case block"></a>Case block</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sign(x)&#x3D;</span><br><span class="line">\begin &#123;cases&#125; </span><br><span class="line">+1, &amp; x\geq0 \\</span><br><span class="line">-1, &amp; x&lt;0 </span><br><span class="line">\end &#123;cases&#125;</span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">
+sign(x)=
+\begin {cases} 
++1, & x\geq0 \\
+-1, & x<0 
+\end {cases}</script><h4 id="Fraction"><a href="#Fraction" class="headerlink" title="Fraction"></a>Fraction</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\frac&#123;1&#125;&#123;1+e^&#123;-x&#125;&#125;\\</span><br><span class="line"></span><br><span class="line">\begin&#123;aligned&#125;</span><br><span class="line">  x_0+\frac&#123;1&#125;&#123;x_1+\frac&#123;1&#125;&#123;x_2+\frac&#123;1&#125;&#123;x_3+\frac&#123;1&#125;&#123;x_4&#125;&#125;&#125;&#125;</span><br><span class="line">\end&#123;aligned&#125;</span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">\frac{1}{1+e^{-x}}\\
+\begin{aligned}
+  x_0+\frac{1}{x_1+\frac{1}{x_2+\frac{1}{x_3+\frac{1}{x_4}}}}
+\end{aligned}</script><h4 id="Matrix"><a href="#Matrix" class="headerlink" title="Matrix"></a>Matrix</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\begin&#123;bmatrix&#125; a &amp; b \\ c &amp; c \end&#123;bmatrix&#125;</span><br><span class="line">\begin&#123;vmatrix&#125; x &amp; y \\ z &amp; v \end&#123;vmatrix&#125;</span><br><span class="line">\begin&#123;Bmatrix&#125; x &amp; y \\ z &amp; v \end&#123;Bmatrix&#125;</span><br><span class="line">\begin&#123;pmatrix&#125; x &amp; y \\ z &amp; v \end&#123;pmatrix&#125;</span><br><span class="line">\begin&#123;bmatrix&#125; 0 &amp; \cdots &amp; 0 \\ \vdots &amp; \ddots &amp; \vdots \\ 0 &amp; \cdots &amp; 0 \end&#123;bmatrix&#125;</span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">
+\begin{bmatrix} a & b \\ c & c \end{bmatrix}
+\begin{vmatrix} x & y \\ z & v \end{vmatrix}
+\begin{Bmatrix} x & y \\ z & v \end{Bmatrix}
+\begin{pmatrix} x & y \\ z & v \end{pmatrix}
+\begin{bmatrix} 0 & \cdots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \cdots & 0 \end{bmatrix}</script>]]></content>
+      <categories>
+        <category>Technical Writing</category>
+      </categories>
+      <tags>
+        <tag>latex</tag>
+      </tags>
+  </entry>
 </search>
