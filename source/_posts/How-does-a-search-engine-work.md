@@ -3,7 +3,6 @@ title: How Does A Search Engine Work?
 date: 2017-04-04 22:45:37
 tags: search
 categories: Web
-mathjax: true
 
 ---
 We use search engine every day, Google get 3 to 5 billions searching queries every day. I will give a brief introduction about how searching engine works.

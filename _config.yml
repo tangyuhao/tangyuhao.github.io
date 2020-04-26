@@ -145,6 +145,7 @@ theme_config:
     style: 
   
   math:
+    per_page: false
     mathjax:
       enable: true
   
