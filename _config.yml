@@ -73,7 +73,7 @@ search:
   path: search.xml
   field: post
   format: html
-  content: true
+#   content: true
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
@@ -104,7 +104,7 @@ theme_config:
     position: right
   
   avatar:
-    url: /images/avatar.jpg
+    url: /uploads/avatar.jpg
     rounded: true
 
   social:
@@ -151,7 +151,7 @@ theme_config:
   # Font custom setting
   custom_file_path:
     style: source/_data/styles.styl
-  
+
   # ---------------------------------------------------------------
   # Font Settings
   # See: https://theme-next.org/docs/theme-settings/#Fonts-Customization
