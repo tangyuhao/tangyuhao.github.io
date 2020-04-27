@@ -152,6 +152,9 @@ theme_config:
   custom_file_path:
     style: source/_data/styles.styl
 
+  mobile_layout_economy: true
+  tag_icon: true
+
   # ---------------------------------------------------------------
   # Font Settings
   # See: https://theme-next.org/docs/theme-settings/#Fonts-Customization
@@ -178,7 +181,7 @@ theme_config:
     # Global font settings used for all elements inside <body>.
     global:
       external: true
-      family: Calibri
+      family: Monda
       size:
 
     # Font settings for site title (.site-title).
