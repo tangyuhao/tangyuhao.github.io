@@ -592,7 +592,7 @@ pre .javascript .function {
 }
 .post-body .group-picture img {
   margin: 0 auto;
-  padding: 0 3px;
+  padding: 0 6px;
 }
 .group-picture-row {
   margin-bottom: 6px;
@@ -600,7 +600,7 @@ pre .javascript .function {
 }
 .group-picture-column {
   float: left;
-  margin-bottom: 10px;
+  overflow: hidden;
 }
 .post-body .label {
   color: #555;
@@ -1195,7 +1195,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #c7d539;
+  background: #ff7c12;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2504,9 +2504,6 @@ hr {
 .posts-expand .post-title,
 .posts-expand .post-meta {
   text-align: center;
-}
-.posts-expand .post-body img {
-  margin-left: 0;
 }
 .posts-expand .post-tags {
   text-align: left;
