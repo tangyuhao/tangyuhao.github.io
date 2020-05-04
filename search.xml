@@ -59,7 +59,7 @@
 <h3 id="构图-amp-对焦"><a href="#构图-amp-对焦" class="headerlink" title="构图&amp;对焦"></a>构图&amp;对焦</h3><p>在伸手不见五指的情况下相机的自动对焦不能工作并且LCD也不能看出画面的构图，这时候就需要我们使用超高iso最大光圈和较短快门多拍摄几张来确定构图。之后分别在拍摄前景和星空的时候手动对焦直到对象清晰。<br>比如下图就是 ISO 64000, F/2.8, 2s 拍摄的，虽然画质很差但是后期不会用到这张所以没有关系。<br><img src="/images/star-trail/focus.jpg" alt=""></p>
 <h3 id="前景"><a href="#前景" class="headerlink" title="前景"></a>前景</h3><p>拍摄前景相对来说快很多，不过它需要用手机灯光补光。大概流程就是低iso曝光20秒-1分钟（其实时间长短很灵活，因为主要光线是手机提供的）左右，期间用手机手电筒均匀在前景上打光2-5秒（看结果而定），注意要均匀，否则照片很假。这里不推荐手电筒也是这个原因，大部分手电筒的亮度很高，效果会非常生硬。这里我大概拍了十几张，从中选了6张做<a href="https://www.zhihu.com/question/31866887" target="_blank" rel="noopener">中间值堆栈降噪</a>来获得低噪点的前景（参数：16mm, ISO 800, F/2.8, 60s）:<br><div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="/images/star-trail/front1.jpg" alt=""></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="/images/star-trail/front2.jpg" alt=""></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="/images/star-trail/front3.jpg" alt=""></div></div><div class="group-picture-row"><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="/images/star-trail/front4.jpg" alt=""></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="/images/star-trail/front5.jpg" alt=""></div><div class="group-picture-column" style="width: 33.333333333333336%;"><img src="/images/star-trail/front6.jpg" alt=""></div></div></div></div></p>
 <p>然后我们对图片做以下调整：</p>
-<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="/images/star-trail/adjust1.png" height="500px"></div><div class="group-picture-column" style="width: 50%;"><img src="/images/star-trail/adjust2.png" height="500px"></div></div></div></div>
+<div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="/images/star-trail/adjust1.jpg" height="500px"></div><div class="group-picture-column" style="width: 50%;"><img src="/images/star-trail/adjust2.jpg" height="500px"></div></div></div></div>
 <p>就能初步得到层次丰富的地景（下图右），可以看到由于6张照片的堆栈，天空中已经隐隐约约出现了星轨了，不过最后他们是会用蒙版擦除的。这里只做了非常简单的对比度，亮度以及鲜艳度的调整，我比较喜欢夜景色调偏紫偏冷，所以把色调往洋红偏了一些使得画面更加生动。</p>
 <div class="group-picture"><div class="group-picture-container"><div class="group-picture-row"><div class="group-picture-column" style="width: 50%;"><img src="/images/star-trail/ground-after-stack.jpg" alt=""></div><div class="group-picture-column" style="width: 50%;"><img src="/images/star-trail/ground-after-stack-2.jpg" alt=""></div></div></div></div>
 <h3 id="星轨"><a href="#星轨" class="headerlink" title="星轨"></a>星轨</h3><p>星轨部分是非常耗时的，主要是因为这一步拍摄的时候需要拍摄一小时甚至更久，另一方面后期需要大量的CPU计算以及占用会大量的内存。</p>
@@ -79,9 +79,9 @@
 <h4 id="后期"><a href="#后期" class="headerlink" title="后期"></a>后期</h4><p>星轨的后期同样是利用堆栈，不过这次我们使用的是“<a href="https://zhuanlan.zhihu.com/p/23355184" target="_blank" rel="noopener">最大值堆栈</a>”，它的原理是把每张图片最亮的像素点作为输出结果。我是直接拿200张照片合成，电脑的32G内存完全被占满，CPU也是高负荷工作，所以这里对电脑配置要求还是蛮高的，否则会很慢。结果如下：</p>
 <p><img src="/images/star-trail/sky-after-stack.jpg" alt=""></p>
 <p>真的是丑哭了有没有，但是还好我只要天空部分。为了配合地面的颜色，我用Camera Raw做了类似的调色：</p>
-<p><img src="/images/star-trail/adjust3.png" alt=""></p>
+<p><img src="/images/star-trail/adjust3.jpg" alt=""></p>
 <p>然后使用PS蒙版擦掉地面部分并且叠放在地景图层上：</p>
-<p><img src="/images/star-trail/adjust4.png" alt=""></p>
+<p><img src="/images/star-trail/adjust4.jpg" alt=""></p>
 <p>这样初步调整就完成啦！</p>
 <h3 id="总体调整"><a href="#总体调整" class="headerlink" title="总体调整"></a>总体调整</h3><p>调整完之后感觉还是有些平淡，所以我就针对合成后的图片进行了再调色。这里我觉得色彩不够鲜艳，局部的对比度也有调整的空间，所以使用了Nik Collection 插件集合下的 Color Efec Pro做调整：</p>
 <ol>
