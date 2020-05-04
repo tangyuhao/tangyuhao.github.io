@@ -205,5 +205,10 @@ theme_config:
     codes:
       external: true
       family: Roboto Mono
+  
+  # fancybox plugin: 
+  # cd source/lib
+  # git clone https://github.com/theme-next/theme-next-fancybox3 fancybox
+  fancybox: true
 
 
